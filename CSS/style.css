@@ -1,12 +1,17 @@
-::backdrop {
-    --primary-color:var(#d30000)
-}
 :root {
     --primary-color: #d30000;
     --background-color: #f4f4f4;
     --text-color: #333333;
     --font-main: "Arial", sans-serif;
-    --content-width: Auto
+    --content-width: auto;
+}
+
+html, body {
+    background-image: url('../Images/hero-image.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
 }
 * {
     box-sizing: border-box;
@@ -31,7 +36,7 @@ body {
 div {
     max-width: var(--content-width);
     margin: 0 auto;
-    background: rgb(227, 235, 157);
+    background: rgba(255, 255, 255, 0.9); 
     padding: 20px;
     border-radius: 10px;
 }
