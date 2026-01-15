@@ -25,14 +25,12 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
-
 .menu-row {
-    display: flex;     
+    display: flex;  /* this makes this a 'flex container' for the meal classes */ 
     flex-direction: row;
     justify-content: center;
     gap: 50px;
 }
-
 div {
     max-width: var(--content-width);
     margin: 0 auto;
@@ -40,14 +38,12 @@ div {
     padding: 20px;
     border-radius: 10px;
 }
-
 img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
     margin-top: 20px;
 }
-
 h1 {
     color: var(--primary-color);
     margin-bottom: 10px;
@@ -56,4 +52,10 @@ h1 {
 p {
     text-align: center;
     font-size: 1.1rem;
+}
+h3 {
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    justify-self: center;
 }
