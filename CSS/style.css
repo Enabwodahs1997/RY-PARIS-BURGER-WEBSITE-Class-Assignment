@@ -26,10 +26,12 @@ body {
     padding: 20px;
 }
 .menu-row {
-    display: flex;  /* this makes this a 'flex container' for the meal classes */ 
+    display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    gap: 1vw;
 }
 div {
     max-width: var(--content-width);
@@ -43,6 +45,8 @@ img {
     height: auto;
     border-radius: 5px;
     margin-top: 20px;
+    width: 100% !important;
+    max-width: 300px !important;
 }
 h1 {
     color: var(--primary-color);
@@ -58,4 +62,171 @@ h3 {
     margin-top: 20px;
     margin-bottom: 10px;
     justify-self: center;
+}
+.link-recipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: auto;
+    margin-top: 20px;
+}
+button {
+    background-color: rgb(253, 253, 253);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+button:hover::after {
+    content: "Click to view the healthy recipe!";
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(239, 190, 190);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 10; 
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+button:not(:hover)::after {
+    opacity: 0;
+    pointer-events: none;
+}
+body {
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    padding: 2vw;
+}
+div {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    padding: 2vw;
+    border-radius: 10px;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-size: clamp(1rem, 3vw, 1.1rem); /* Fluid font size */
+}
+
+.menu-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    gap: 1vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+.healthy-meal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.healthy-meal p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+@media (max-width: 480px) { 
+    .menu-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    p {
+        font-size: 0.95rem;
+    }
+    
+    div {
+        padding: 10px;
+        border-radius: 5px; /* Smaller radius for mobile */
+    }
+    
+    body {
+        padding: 10px;
+    }
+    
+    img {
+        margin-top: 15px;
+    }
+    
+    button {
+        right: 10px;
+        bottom: 10px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 768px) { 
+    .menu-row {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    div {
+        padding: 15px;
+    }
+    
+    body {
+        padding: 15px;
+    }
+    
+    button {
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        padding: 8px 16px; /* Smaller button on mobile */
+        font-size: 0.9rem;
+    }
 }

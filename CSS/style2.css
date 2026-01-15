@@ -1,0 +1,100 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(231, 128, 25, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 1000;
+    overflow: hidden; 
+    box-sizing: border-box;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+@media (max-width: 768px) {
+    .topbar {
+        padding: 8px 15px;
+    }
+    
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        left: 15px;
+        top: 15px;
+    }
+    
+    .content {
+        margin-top: 40px; /* Adjust for smaller topbar on tablets */
+        padding: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .topbar {
+        padding: 5px 10px;
+    }
+    
+    button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        left: 10px;
+        top: 10px;
+    }
+    
+    .content {
+        margin-top: 30px; /* Adjust for smaller topbar on mobile */
+        padding: 10px;
+    }
+}
+button {
+    background-color: rgb(255, 255, 255);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+button:hover {
+    background-color: rgb(255, 179, 179);
+    color: rgb(255, 179, 179);
+}
+button:hover::after {
+    content: "Home Page";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(252, 252, 252);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 10; 
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+button:not(:hover)::after {
+    opacity: 0;
+    pointer-events: none;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.6;
+    padding: 20px;
+    padding: 2vw;
+    margin-top: 60px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
