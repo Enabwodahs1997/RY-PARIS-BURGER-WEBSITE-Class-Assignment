@@ -58,7 +58,7 @@ p {
     font-size: 1.1rem;
 }
 h3 {
-    color: var(--primary-color);
+    color: rgb(35, 72, 124);
     margin-top: 20px;
     margin-bottom: 10px;
     justify-self: center;
@@ -152,6 +152,7 @@ img {
     max-width: 300px;
 }
 .healthy-meal {
+    background-color: rgb(172, 172, 172);
     display: flex;
     flex-direction: column;
     align-items: center;
