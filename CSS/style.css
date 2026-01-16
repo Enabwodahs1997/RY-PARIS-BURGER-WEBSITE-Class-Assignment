@@ -84,13 +84,13 @@ button {
     bottom: 50px;
 }
 button:hover::after {
-    content: "Click to view the healthy recipe!";
+    content: "Healthy Meal Recipe!";
     position: absolute;
-    bottom: 100; 
-    left: 50%;
+    top: 20%; 
+    right: 15%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
-    color: rgb(239, 190, 190);
+    color: rgb(255, 255, 255);
     padding: 8px 12px;
     border-radius: 4px;
     font-size: 0.9rem;
