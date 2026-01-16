@@ -81,12 +81,12 @@ button {
     transition: background-color 0.3s, color 0.3s;
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 50px;
 }
 button:hover::after {
     content: "Click to view the healthy recipe!";
     position: absolute;
-    bottom: 100%; 
+    bottom: 100; 
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
@@ -230,4 +230,20 @@ a {
         padding: 8px 16px; /* Smaller button on mobile */
         font-size: 0.9rem;
     }
+}
+footer {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(231, 128, 25, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 1000;
+    overflow: hidden; 
+    box-sizing: border-box;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
 }
